@@ -1,0 +1,17 @@
+export const wrappers = [
+  "https://i.pinimg.com/564x/e8/b4/3c/e8b43c5d0f07773058559755dea836eb.jpg",
+  "https://i.pinimg.com/564x/17/2d/97/172d97fa6dd86ff7341e1ddb5c336542.jpg",
+  "https://i.pinimg.com/564x/bb/a9/a3/bba9a332eaa26f8af7225202d5049f10.jpg",
+  "https://i.pinimg.com/564x/88/f4/e6/88f4e6c24564596bc3b534d31c3d558f.jpg",
+  "https://i.pinimg.com/564x/55/ac/52/55ac52e362010f11dfee0f7bfa2f30d7.jpg",
+  "https://i.pinimg.com/564x/af/3a/84/af3a848900b9272fbe2854c188078242.jpg",
+  "https://i.pinimg.com/564x/49/fc/55/49fc5598a847286aac27d94ec2a80a43.jpg",
+  "https://i.pinimg.com/originals/36/77/72/36777261fc6a923411ffa24ae0b75d6a.jpg",
+  "https://i.pinimg.com/originals/cb/30/cb/cb30cb1e3c08c39d32fdc96006a5f099.jpg",
+  "https://i.pinimg.com/564x/49/fc/55/49fc5598a847286aac27d94ec2a80a43.jpg",
+  "https://i.pinimg.com/originals/36/77/72/36777261fc6a923411ffa24ae0b75d6a.jpg",
+  "https://i.pinimg.com/originals/cb/30/cb/cb30cb1e3c08c39d32fdc96006a5f099.jpg",
+  "https://i.pinimg.com/564x/e8/b4/3c/e8b43c5d0f07773058559755dea836eb.jpg",
+  "https://i.pinimg.com/564x/17/2d/97/172d97fa6dd86ff7341e1ddb5c336542.jpg",
+  "https://i.pinimg.com/564x/bb/a9/a3/bba9a332eaa26f8af7225202d5049f10.jpg",
+];

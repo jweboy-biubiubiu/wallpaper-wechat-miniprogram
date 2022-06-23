@@ -1,0 +1,1 @@
+type Image { _id: string; image_url: string }
