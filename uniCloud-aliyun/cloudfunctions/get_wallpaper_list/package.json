@@ -1,7 +1,10 @@
 {
   "name": "get_wallpaper_list",
-  "dependencies": {},
-  "extensions": {
-    "uni-cloud-jql": {}
-  }
+  "version": "1.0.0",
+  "description": "获取壁纸列表",
+	"cloudfunction-config": {
+		"triggers": [{
+			"config": "0 0 1 * * * *"
+		}]
+	}
 }
