@@ -1,5 +1,4 @@
 <template>
-  <!-- <view :style="data.imageStyle"/> -->
   <image mode="aspectFill" :src="data.imgUrl" :style="data.imageStyle"/>
   <view class="footer">
     <navigator :delta="1" open-type="navigateBack">
@@ -18,11 +17,11 @@ const systemInfo = uni.getSystemInfoSync();
 const { screenWidth, screenHeight } = systemInfo;
 
 let data = reactive({ imgUrl: '', imageStyle: {} });
-const refererPlicyUrl = 'https://images.weserv.nl?url='
+// const refererPlicyUrl = 'https://images.weserv.nl?url='
 const icon = { color: '#fff', size: 30 }
 
 onLoad((option) => {
-  data.imgUrl = refererPlicyUrl + option.url as string;
+  data.imgUrl = option.url as string;
   data.imageStyle = {
     // backgroundImage: `url(${data.imgUrl})`,
     // backgroundSize: 'contain',
@@ -36,9 +35,13 @@ onLoad((option) => {
 const handleDownloadWrapper = async () => {
   try {
     uni.showLoading({ title: '下载中...' });
-    const res = await uni.getImageInfo({ src: data.imgUrl })
-    if (res.errMsg === 'getImageInfo:ok') {
-      await uni.saveImageToPhotosAlbum({ filePath: res.path })
+    try {
+      const res = await uni.getImageInfo({ src: data.imgUrl })
+      if (res.errMsg === 'getImageInfo:ok') {
+        await uni.saveImageToPhotosAlbum({ filePath: res.path })
+        uni.hideLoading();
+      }
+    } catch (err) {
       uni.hideLoading();
     }
   } catch (error) {

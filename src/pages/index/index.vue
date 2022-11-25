@@ -2,7 +2,7 @@
   <scroll-view :scroll-y="true">
     <view class="grid-content" :style="data.gridStyle">
       <view v-for="item in data.images" :key="item._id" class="grid-item">
-        <image @click="handlePictureClick(item.image_url)" :lazy-load="true" :src="'https://images.weserv.nl?url='+item.image_url" class="image" />
+        <image @click="handlePictureClick(item.image_url)" :lazy-load="true" :src="item.image_url" class="image" />
       </view>
     </view>
   </scroll-view>
@@ -25,6 +25,7 @@ const handlePictureClick = (url: string) => {
 }
 
 onMounted(() => {
+  uni.showLoading({ title: '加载中...' });
   uniCloud.callFunction({ name:'get_wallpaper_list' }).then(({ result }) => {
     let { items, total } = result;
     const columns = 3;
@@ -35,6 +36,9 @@ onMounted(() => {
       'grid-template-columns': `repeat(${columns}, ${wrapperWidth}px)`,
       'grid-template-rows': `repeat(${rows}, ${wrapperHeight}px)`
     }
+    uni.hideLoading();
+  }).catch(() => {
+    uni.hideLoading();
   })
 })
 
@@ -52,6 +56,7 @@ onMounted(() => {
     .image {
       width: 100%;
       height: 100%;
+      background-color: #efefef;
     }
   }
 }

@@ -1,23 +1,21 @@
 <script setup lang="ts">
 import { onLaunch, onShow, onHide } from "@dcloudio/uni-app";
-import { onMounted } from "vue";
+
 onLaunch(() => {
-  console.log("App Launch");
-});
-onShow(() => {
-  console.log("App Show");
+  // #ifdef MP-WEIXIN
   uni.showShareMenu({
     menus: ["shareAppMessage", "shareTimeline"]
   });
-  uniCloud.init({
-    provider: 'aliyun',
-    spaceId: '5f77682f-ccf4-4de7-aeb3-d36a85f3373c',
-    clientSecret: '5LHi8F/ZbCTxHBkZ6HeekA=='
-  })
+  // #endif
 });
-onHide(() => {
-  console.log("App Hide");
-});
+
+// onShow(() => {
+//   console.log("App Show");
+  
+// });
+// onHide(() => {
+//   console.log("App Hide");
+// });
 </script>
 <style>
   page {

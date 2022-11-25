@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "Wallpaper",
+				"navigationBarTitleText": "精选壁纸",
 				"navigationBarBackgroundColor": "#1c1f23",
 				"enablePullDownRefresh": true
 			}
