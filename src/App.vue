@@ -20,7 +20,7 @@ onLaunch(() => {
 <style>
   page {
     height: 100vh;
-    background-color:#1c1f23;
+    background-color: #efefef;
   }
   scroll-view {
     height: 100%;

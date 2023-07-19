@@ -15,11 +15,19 @@
 				"disableScroll": true
 			}
 		}
-		
+		{
+			"path": "pages/synology/index"
+		},
+		{
+			"path": "pages/shareAlbums/index"
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
-		"navigationBarBackgroundColor": "#1c1f23",
-		"backgroundColor": "#1c1f23"
+		"usingComponents": {  
+			"van-button": "/wxcomponents/vant/button/index",
+			"van-field": "/wxcomponents/vant/field/index",
+			"van-cell-group": "/wxcomponents/vant/cell-group/index"
+		}  
 	}
 }

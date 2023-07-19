@@ -1,11 +1,12 @@
 <template>
-  <scroll-view :scroll-y="true">
-    <view class="grid-content" :style="data.gridStyle">
+  <view>
+    <!-- <view class="grid-content" :style="data.gridStyle">
       <view v-for="item in data.images" :key="item._id" class="grid-item">
         <image @click="handlePictureClick(item.image_url)" :lazy-load="true" :src="item.image_url" class="image" />
       </view>
-    </view>
-  </scroll-view>
+    </view> -->
+    <van-button type="danger" round>危险按钮</van-button>
+  </view>
 </template>
 
 <script setup lang="ts">
@@ -25,21 +26,22 @@ const handlePictureClick = (url: string) => {
 }
 
 onMounted(() => {
-  uni.showLoading({ title: '加载中...' });
-  uniCloud.callFunction({ name:'get_wallpaper_list' }).then(({ result }) => {
-    let { items, total } = result;
-    const columns = 3;
-    const rows = Math.ceil(total / columns);
-    // console.log(result)
-    data.images = items;
-    data.gridStyle = {
-      'grid-template-columns': `repeat(${columns}, ${wrapperWidth}px)`,
-      'grid-template-rows': `repeat(${rows}, ${wrapperHeight}px)`
-    }
-    uni.hideLoading();
-  }).catch(() => {
-    uni.hideLoading();
-  })
+  // uni.showLoading({ title: '加载中...' });
+  // uniCloud.callFunction({ name:'get_wallpaper_list' }).then(({ result }) => {
+  //   let { items, total } = result;
+  //   const columns = 3;
+  //   const rows = Math.ceil(total / columns);
+  //   // console.log(result)
+  //   data.images = items;
+  //   data.gridStyle = {
+  //     'grid-template-columns': `repeat(${columns}, ${wrapperWidth}px)`,
+  //     'grid-template-rows': `repeat(${rows}, ${wrapperHeight}px)`
+  //   }
+  //   uni.hideLoading();
+  // }).catch(() => {
+  //   uni.hideLoading();
+  // })
+  
 })
 
 </script>
