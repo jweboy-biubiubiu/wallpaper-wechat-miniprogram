@@ -59,14 +59,21 @@
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3080720230627002",
     "@dcloudio/uni-stacktracey": "3.0.0-alpha-3080720230627002",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3080720230627002",
+    "@typescript-eslint/parser": "^6.1.0",
     "add": "^2.0.6",
     "autoprefixer": "^10.4.14",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.6.0",
     "postcss": "^8.4.25",
+    "prettier": "^2.7.1",
     "sass": "^1.52.3",
     "sass-loader": "10.1.1",
     "tailwindcss": "^3.3.2",
     "typescript": "^4.7.3",
     "vite": "^4.0.3",
+    "vue-eslint-parser": "^9.1.0",
     "weapp-tailwindcss": "^2.6.0"
   }
 }
