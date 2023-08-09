@@ -1,3 +1,5 @@
 type UserInfo = {
-  did: string
-}
+  did: string;
+  sid: string;
+  synotoken: string;
+};

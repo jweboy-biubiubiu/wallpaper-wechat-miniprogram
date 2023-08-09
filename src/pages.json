@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "精选壁纸",
+				"navigationBarTitleText": "喵喵喵",
 				"navigationBarBackgroundColor": "#1c1f23",
 				"enablePullDownRefresh": true
 			}
@@ -11,23 +11,12 @@
 		{
 			"path": "pages/detail/index",
 			"style": {
-				"navigationStyle": "custom",
+				"navigationStyle": "default",
 				"disableScroll": true
 			}
 		}
-		{
-			"path": "pages/synology/index"
-		},
-		{
-			"path": "pages/shareAlbums/index"
-		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
-		"usingComponents": {  
-			"van-button": "/wxcomponents/vant/button/index",
-			"van-field": "/wxcomponents/vant/field/index",
-			"van-cell-group": "/wxcomponents/vant/cell-group/index"
-		}  
+		"navigationBarTextStyle": "white"
 	}
 }

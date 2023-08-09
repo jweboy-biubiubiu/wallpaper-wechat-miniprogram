@@ -13,16 +13,20 @@ module.exports = {
   ],
   plugins: ["prettier"],
   // 解析vue文件
-  parser: "@typescript-eslint/parser",
+  parser: "vue-eslint-parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+  },
   rules: {
     // "no-console": import.meta.env.MODE === "production" ? "off" : "off",
     // "no-debugger": import.meta.env.MODE === "production" ? "error" : "off",
   },
   overrides: [
     {
-      files: ["*.ts"],
+      files: ["*.ts", "*.vue", "*.d.ts"],
       rules: {
         "no-undef": "off",
+        "no-unused-vars": "off",
       },
     },
   ],
